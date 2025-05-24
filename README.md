@@ -44,7 +44,7 @@ docker compose up
 ## 🌐 Acessando a API
 
 - [API](http://localhost:8080)
-- [Health Check](http://localhost:8080/health)
+- [Health Check](http://localhost:8080/api/health)
 - [Swagger](http://localhost:8080/swagger-ui/index.html)
 
 ---
