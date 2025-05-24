@@ -1,4 +1,4 @@
-# ✨ Avaliação de Admissão | Neurotech
+# 💎 Avaliação de Admissão | Neurotech
 
 Esta aplicação foi desenvolvida como parte do processo seletivo para a Neurotech.
 O repositório oficial com todos os requisitos, especificações e instruções pode ser acessado em:
