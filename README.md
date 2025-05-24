@@ -1,39 +1,58 @@
-# Avaliação para admissão de Desenvolvedores para a Neurotech
+# ✨ Avaliação de Admissão | Neurotech
 
-## Instruções
+Esta aplicação foi desenvolvida como parte do processo seletivo para a Neurotech.
+O repositório oficial com todos os requisitos, especificações e instruções pode ser acessado em:
+[Neurotech Challenge - GitHub](https://github.com/Neurolake/challenge-java-developer)
 
-- Realize o fork deste projeto para desenvolver a sua solução. Não serão aceitos commits diretamente para este repositório;
-- Após o desenvolvimento da sua solução, nos avise, enviando o link do seu projeto para que iniciemos a avaliação. **Não crie Pull Requests!**
-- A solução deve ser entregue em um prazo máximo de 3 dias. 
+---
 
-## Descrição
+## 🚀 Tecnologias utilizadas
 
-Trata-se de um projeto que avalia e aplica modalidades diferentes de crédito a clientes PF, de acordo com critérios específicos. As modalidades diferentes de crédito estão descritas a seguir:
+- 🐳 **Docker e Docker Compose**
+- 🛢️ **PostgreSQL 17**
+- ☕ **Java 21**
+- 🌱 **Spring Boot 3.4.5**
+- 📄 **Swagger (OpenAPI)**
 
--   Crédito com Juros fixos: Aplicado a clientes com idade entre 18 e 25 anos, independente de renda. Taxa de 5% a.a
--   Crédito com Juros variáveis: Aplicado a clientes com idade entre 21 e 65 anos, com renda entre R$ 5000,00 e R$ 15000,00.
--   Crédito Consignado: Aplicado a clientes acima de 65 anos, independente de renda.
+---
 
-O projeto deve ser implantado como uma API RESTful, utilizando a linguagem Java e o framework Springboot. Atentar para implementações típicas de uma API RESTful, como códigos HTTP para cada tipo de endpoint, validação de dados, Documentação utilizando Swagger, e também testes automáticos para os endpoints implementados.
+## 🛠️ Como rodar o projeto localmente
 
-De maneira obrigatória, os seguintes endpoints devem ser implementados:
+1. **Clone o repositório**
 
--   Endpoint para cadastro de clientes: Deve receber Informações como Nome, idade, renda. Como retorno, uma entrada no header da resposta contendo a URL que identifica o cliente (Ex: [http://localhost/api/client/050](http://localhost/api/client/050)). O nome do header deve ser “Location”.
-    
--   Endpoint para retornar os dados do cliente de acordo com seu ID, indicado na URL (Ex: [http://localhost/api/client/050](http://localhost/api/client/050)). O retorno deve ser um objeto JSON contendo os dados do cliente. Por exemplo:
-
+```bash
+git clone https://github.com/Neurolake/challenge-java-developer.git
 ```
-{ 
-  "Name": "Bob",
-  "Age": 40,
-  "Income": 10000
-}
+
+2. **Entre na pasta do projeto**
+
+```bash
+cd challenge-java-developer
 ```
--   Endpoint para definir se um determinado cliente está apto a oferecer um crédito automotivo para determinado modelo de veículo.
-    -   Hatch: Renda entre R$ 5000,00 e R$15000,00.
-    -   SUV: Renda acima de R$8000,00 e idade superior a 20 anos.
-    
 
-Como adicional, mas não obrigatório, implemente um endpoint para se determinar todos os clientes entre 23 e 49 anos que possuem Crédito com juros fixos e estão aptos a adquirirem crédito automotivo para veículos do tipo Hatch. O objeto de retorno deve conter uma lista com o nome e a renda de cada um destes clientes.
+3. **Suba os containers com Docker Compose**
 
-Boa sorte!
+Certifique-se de ter o Docker e Docker Compose instalados em sua máquina.
+Caso não tenha, acesse: [Docker Install](https://docs.docker.com/engine/install/), [Compose Install](https://docs.docker.com/compose/install/).
+
+```bash
+docker compose up
+```
+
+---
+
+## 🌐 Acessando a API
+
+- [API](http://localhost:8080)
+- [Health Check](http://localhost:8080/health)
+- [Swagger](http://localhost:8080/swagger-ui/index.html)
+
+---
+
+## 📂 Estrutura do Projeto
+
+- `src/main/java` — Código-fonte da aplicação
+- `src/test/java` — Testes automatizados
+- `docker-compose.yml` — Configuração dos containers
+- `Dockerfile` — Build da aplicação
+

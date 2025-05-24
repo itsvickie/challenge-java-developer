@@ -1,6 +1,15 @@
 spring:
   application:
     name: challenge-java-developer
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:db}:${DB_PORT:5432}/${DB_NAME:challenge-db}
+    username: ${DB_USERNAME:challenge-user}
+    password: ${DB_PASSWORD:challenge-pass}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 server:
-  port: 5000
+  port: ${APP_PORT:8080}
